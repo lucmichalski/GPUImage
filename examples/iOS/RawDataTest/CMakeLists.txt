@@ -18,9 +18,11 @@ add_executable(
     RawDataTest
     ${RAWDATATEST_SOURCES}
     ${RAWDATATEST_RESOURCES}
+    ${RAWDATATEST_SHADERS}
 )
 
 set_source_files_properties(
+    ${RAWDATATEST_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -67,3 +69,7 @@ else()
 endif()
 
 target_link_libraries(RawDataTest PRIVATE GPUImage::gpuimage)
+
+target_include_directories(RawDataTest PRIVATE "./Classes")
+
+

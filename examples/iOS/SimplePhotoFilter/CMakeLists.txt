@@ -18,9 +18,11 @@ add_executable(
     SimplePhotoFilter
     ${SIMPLEPHOTOFILTER_SOURCES}
     ${SIMPLEPHOTOFILTER_RESOURCES}
+    ${SIMPLEPHOTOFILTER_SHADERS}
 )
 
 set_source_files_properties(
+    ${SIMPLEPHOTOFILTER_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -67,3 +69,6 @@ else()
 endif()
 
 target_link_libraries(SimplePhotoFilter PRIVATE GPUImage::gpuimage)
+
+target_include_directories(SimplePhotoFilter PRIVATE "./Classes")
+
