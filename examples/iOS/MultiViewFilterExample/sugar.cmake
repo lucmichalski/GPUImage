@@ -3,10 +3,10 @@
 # see wiki for more info:
 #   https://github.com/ruslo/sugar/wiki/Collecting-sources
 
-if(DEFINED CUBEEXAMPLE_SUGAR_CMAKE_)
+if(DEFINED MULTIVIEWFILTEREXAMPLE_SUGAR_CMAKE_)
   return()
 else()
-  set(CUBEEXAMPLE_SUGAR_CMAKE_ 1)
+  set(MULTIVIEWFILTEREXAMPLE_SUGAR_CMAKE_ 1)
 endif()
 
 include(sugar_files)
@@ -16,16 +16,16 @@ sugar_include(Classes)
 sugar_include(Shaders)
 
 sugar_files(
-    CUBEEXAMPLE_SOURCES
+    MULTIVIEWFILTEREXAMPLE_SOURCES
     main.m
 )
 
 sugar_files(
-    CUBEEXAMPLE_RESOURCES
+    MULTIVIEWFILTEREXAMPLE_RESOURCES
     Default-568h@2x.png
 )
 
 sugar_files(
-    CUBEEXAMPLE_PLIST
+    MULTIVIEWFILTEREXAMPLE_PLIST
     Info.plist.in
 )

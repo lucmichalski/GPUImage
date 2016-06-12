@@ -16,8 +16,8 @@ sugar_include("./")
 
 add_executable(
     SimplePhotoFilter
-    ${SimplePhotoFilter_SOURCES}
-    ${SimplePhotoFilter_RESOURCES}
+    ${SIMPLEPHOTOFILTER_SOURCES}
+    ${SIMPLEPHOTOFILTER_RESOURCES}
 )
 
 set_source_files_properties(
