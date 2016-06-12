@@ -18,11 +18,9 @@ add_executable(
     FilterShowcaseSwift
     ${FILTERSHOWCASESWIFT_SOURCES}
     ${FILTERSHOWCASESWIFT_RESOURCES}
-    ${FILTERSHOWCASESWIFT_SHADERS}
 )
 
 set_source_files_properties(
-    ${FILTERSHOWCASESWIFT_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -69,5 +67,3 @@ else()
 endif()
 
 target_link_libraries(FilterShowcaseSwift PRIVATE GPUImage::gpuimage)
-
-target_include_directories(FilterShowcaseSwift PRIVATE "./Classes")

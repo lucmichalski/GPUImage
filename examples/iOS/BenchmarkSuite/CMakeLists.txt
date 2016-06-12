@@ -18,11 +18,9 @@ add_executable(
     BenchmarkSuite
     ${BENCHMARKSUITE_SOURCES}
     ${BENCHMARKSUITE_RESOURCES}
-    ${BENCHMARKSUITE_SHADERS}
 )
 
 set_source_files_properties(
-    ${BENCHMARKSUITE_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -69,5 +67,3 @@ else()
 endif()
 
 target_link_libraries(BenchmarkSuite PRIVATE GPUImage::gpuimage)
-
-target_include_directories(BenchmarkSuite PRIVATE "./Classes")

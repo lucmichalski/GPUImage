@@ -18,11 +18,9 @@ add_executable(
     FilterShowcase
     ${FILTERSHOWCASE_SOURCES}
     ${FILTERSHOWCASE_RESOURCES}
-    ${FILTERSHOWCASE_SHADERS}
 )
 
 set_source_files_properties(
-    ${FILTERSHOWCASE_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -69,5 +67,3 @@ else()
 endif()
 
 target_link_libraries(FilterShowcase PRIVATE GPUImage::gpuimage)
-
-target_include_directories(FilterShowcase PRIVATE "./Classes")

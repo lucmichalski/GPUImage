@@ -18,11 +18,9 @@ add_executable(
     SimpleVideoFileFilter
     ${SIMPLEVIDEOFILEFILTER_SOURCES}
     ${SIMPLEVIDEOFILEFILTER_RESOURCES}
-    ${SIMPLEVIDEOFILEFILTER_SHADERS}
 )
 
 set_source_files_properties(
-    ${SIMPLEVIDEOFILEFILTER_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -70,4 +68,3 @@ endif()
 
 target_link_libraries(SimpleVideoFileFilter PRIVATE GPUImage::gpuimage)
 
-target_include_directories(SimpleVideoFileFilter PRIVATE "./Classes")

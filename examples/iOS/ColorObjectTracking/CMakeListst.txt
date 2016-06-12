@@ -18,11 +18,9 @@ add_executable(
     ColorObjectTracking
     ${COLOROBJECTTRACKING_SOURCES}
     ${COLOROBJECTTRACKING_RESOURCES}
-    ${COLOROBJECTTRACKING_SHADERS}
 )
 
 set_source_files_properties(
-    ${COLOROBJECTTRACKING_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -69,5 +67,3 @@ else()
 endif()
 
 target_link_libraries(ColorObjectTracking PRIVATE GPUImage::gpuimage)
-
-target_include_directories(ColorObjectTracking PRIVATE "./Classes")

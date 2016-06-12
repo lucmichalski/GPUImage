@@ -18,11 +18,9 @@ add_executable(
     MultiViewFilterExample
     ${MULTIVIEWFILTEREXAMPLE_SOURCES}
     ${MULTIVIEWFILTEREXAMPLE_RESOURCES}
-    ${MULTIVIEWFILTEREXAMPLE_SHADERS}
 )
 
 set_source_files_properties(
-    ${MULTIVIEWFILTEREXAMPLE_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -70,4 +68,3 @@ endif()
 
 target_link_libraries(MultiViewFilterExample PRIVATE GPUImage::gpuimage)
 
-target_include_directories(MultiViewFilterExample PRIVATE "./Classes")

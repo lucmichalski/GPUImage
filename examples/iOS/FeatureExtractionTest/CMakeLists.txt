@@ -18,11 +18,9 @@ add_executable(
     FeatureExtractionTest
     ${FEATUREEXTRACTIONTEST_SOURCES}
     ${FEATUREEXTRACTIONTEST_RESOURCES}
-    ${FEATUREEXTRACTIONTEST_SHADERS}
 )
 
 set_source_files_properties(
-    ${FEATUREEXTRACTIONTEST_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -69,5 +67,3 @@ else()
 endif()
 
 target_link_libraries(FeatureExtractionTest PRIVATE GPUImage::gpuimage)
-
-target_include_directories(FeatureExtractionTest PRIVATE "./Classes")

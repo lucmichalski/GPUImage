@@ -18,11 +18,9 @@ add_executable(
     SimpleSwiftVideoFilterExample
     ${SIMPLESWIFTVIDEOFILTER_SOURCES}
     ${SIMPLESWIFTVIDEOFILTER_RESOURCES}
-    ${SIMPLESWIFTVIDEOFILTER_SHADERS}
 )
 
 set_source_files_properties(
-    ${SIMPLESWIFTVIDEOFILTER_SHADERS}
     PROPERTIES
     MACOSX_PACKAGE_LOCATION
     .
@@ -69,5 +67,3 @@ else()
 endif()
 
 target_link_libraries(SimpleSwiftVideoFilterExample PRIVATE GPUImage::gpuimage)
-
-target_include_directories(SimpleSwiftVideoFilterExample PRIVATE "./Classes")
